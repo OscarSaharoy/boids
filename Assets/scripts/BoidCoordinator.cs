@@ -30,12 +30,6 @@ public class BoidCoordinator : MonoBehaviour
 			LinkedListNode<Boid> listNode = boidBins[binIndex].AddLast( newBoid );
 
 			newBoid.Setup( this, boidBins, binIndex, listNode );
-
-			if(nBoids == 1) {
-				camera.transform.parent = newBoid.transform;
-				camera.transform.localPosition = new Vector3(0, 2, -8);
-				camera.transform.rotation = newBoid.transform.rotation;
-			}
 		}
 	}
 }
